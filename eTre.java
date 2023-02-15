@@ -13,7 +13,7 @@ public class eTre {
 		System.out.println("Write numbers: (-1 to exit)");
 		
 		while(true) {
-			int number = Integer.valueOf(reader.nextLine());
+			int number = reader.nextInt();
 			
 			if (number == -1) {
 				break;
@@ -22,6 +22,14 @@ public class eTre {
 			numbers.add(number);
 		}
 		
-		System.out.println(numbers);
+		System.out.println("From where? ");
+			int start = reader.nextInt();
+		
+		System.out.println("To where? ");
+			int end = reader.nextInt();
+			
+		for (int i = start; i<=end; i++) {
+			System.out.println(numbers.get(i));
+		}
 	}
 }
